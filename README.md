@@ -1,6 +1,6 @@
 # Codeship Pro Ruby on Rails Example
 
-[ ![Codeship Status for codeship-library/ruby-rails-todoapp](https://app.codeship.com/projects/97346e20-f1fa-0134-23f8-2e8f61e6642c/status?branch=master)](https://app.codeship.com/projects/209553)
+[ ![Codeship Status for whiteotter/ruby-rails-todoapp-with-codeclimate](https://app.codeship.com/projects/6fc23b50-9b4c-0135-55b6-4e2a5d346d01/status?branch=master)](https://app.codeship.com/projects/252616)
 
 ## Overview
 The following repository is a `todo` API example developed with Ruby on Rails framework.
