@@ -1,16 +1,9 @@
-- type: parallel
-  steps:
-  - name: rspec
-    service: web_codeship_example_ruby
-    command: bin/ci rspec
-  - name: rubocop
-    service: web_codeship_example_ruby
-    command: rubocop
-- name: deploy
-  tag: master
-  service: codeship_heroku_deployment
-  command: codeship_heroku deploy /deploy ruby-rails-todoapp
-- name: migrate
-  tag: master
-  service: codeship_heroku_deployment
-  command: heroku run --app ruby-rails-todoapp -- bundle exec rake db:migrate
+- name: codeclimate_pre
+  service: web_codeship_example_ruby
+  command: /bin/sh -c 'bin/wait-for-postgres && cc-test-reporter before-build'
+- name: rspec
+  service: web_codeship_example_ruby
+  command: bin/ci rspec
+- name: codeclimate_post
+  service: web_codeship_example_ruby
+  command: /bin/sh -c 'bin/wait-for-postgres && cc-test-reporter after-build --exit-code $?'
