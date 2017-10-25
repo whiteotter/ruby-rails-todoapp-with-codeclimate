@@ -6,4 +6,4 @@
   command: bin/ci rspec
 - name: codeclimate_post
   service: web_codeship_example_ruby
-  command: /bin/sh -c 'bin/wait-for-postgres && cc-test-reporter after-build --exit-code $?'
+  command: /bin/sh -c 'bin/wait-for-postgres && cc-test-reporter after-build'
