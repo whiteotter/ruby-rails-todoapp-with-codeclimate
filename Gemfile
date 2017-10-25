@@ -25,4 +25,5 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov', :require => false
 end
